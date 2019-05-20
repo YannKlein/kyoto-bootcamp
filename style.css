@@ -1,0 +1,91 @@
+/* Fonts and Colors*/
+
+
+body {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  color: white;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #E33921;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+/*Customize style*/
+
+#banner {
+  background-image: url("images/banner.png");
+  background-size: cover;
+}
+
+#overlay {
+  background-color: rgba(0,0,0,0.5);
+  padding: 120px;
+  text-align: center;
+}
+
+#overlay a {
+  text-decoration: none;
+}
+
+
+#overlay p {
+  color: rgb(240,240,240);
+}
+
+.card{
+  margin: 20px;
+  text-align: center;
+}
+
+.card img{
+  width:100px;
+  height:100px;
+}
+
+#footer {
+  background-color: black;
+  padding: 30px 0px;
+  color: white;
+}
+
+#footer a{
+  color: grey;
+  letter-spacing: 20px;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  #overlay {
+    padding: 30px;
+  }
+
+  #overlay p {
+    font-size: 10px;
+  }
+}
+
