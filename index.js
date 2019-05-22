@@ -14,6 +14,11 @@ const showSleepSection = (event) => {
   sleepSection.style.display = "block";
 };
 
+const loadSleepSection = (event) => {
+  appSection.style.display = "none";
+  sleepSection.style.display = "block";
+};
+
 const showLinkSection = (event) => {
   event.preventDefault();
   appSection.style.display = "none";
@@ -33,4 +38,11 @@ linkBtn.addEventListener("click", showLinkSection);
 backBtn.forEach( (btn) => {
   btn.addEventListener("click", showAppSection);
 });
+
+// URL page selector
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('page');
+if (myParam == "accomodations"){
+  loadSleepSection();
+}
 
