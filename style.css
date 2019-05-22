@@ -52,9 +52,19 @@ p {
   color: rgb(240,240,240);
 }
 
-#apps {
-  padding: 50px 0px;
+#app-section {
+  padding: 50px;
   background-color: rgb(250,250,250);
+}
+
+#sleep-section, #link-section{
+  display: none;
+  text-align: left;
+  padding: 20px 15vw;
+}
+
+.back-button {
+
 }
 
 .container {
