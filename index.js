@@ -1,4 +1,5 @@
-// HTML elements selectors
+document.querySelector("h1").contentEditable = true;
+
 sleepBtn = document.querySelector("#sleep-button");
 linkBtn = document.querySelector("#link-button");
 backBtn = document.querySelectorAll(".back-button");
