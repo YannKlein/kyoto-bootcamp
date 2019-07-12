@@ -9,21 +9,24 @@ sleepSection = document.querySelector("#sleep-section");
 linkSection = document.querySelector("#link-section");
 
 //Show functions
-const showSleepSection = (event) => {
-  event.preventDefault();
+const loadSleepSection = () => {
   appSection.style.display = "none";
+  linkSection.style.display = "none";
   sleepSection.style.display = "block";
 };
 
-const loadSleepSection = (event) => {
-  appSection.style.display = "none";
-  sleepSection.style.display = "block";
-};
-
-const showLinkSection = (event) => {
-  event.preventDefault();
+const loadLinkSection = () => {
   appSection.style.display = "none";
   linkSection.style.display = "block";
+  sleepSection.style.display = "none";
+};
+const showSleepSection = (event) => {
+  event.preventDefault();
+  loadSleepSection();
+};
+const showLinkSection = (event) => {
+  event.preventDefault();
+  loadLinkSection();
 };
 
 const showAppSection = (event) => {
@@ -43,7 +46,15 @@ backBtn.forEach( (btn) => {
 // URL page selector
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('page');
-if (myParam == "accomodations"){
-  loadSleepSection();
+switch(myParam) {
+  case "accomodations":
+    loadSleepSection();
+    break;
+  case "useful-links":
+    loadLinkSection();
+    break;
+  default:
+    console.log("Available pages: page=accomodations, page=useful-links");
 }
+
 
